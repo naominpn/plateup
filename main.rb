@@ -89,22 +89,20 @@ end
 post '/diary/new' do
   redirect '/login' unless logged_in?
 
-  sql = "INSERT INTO logs (date, exercise, weight, sets, reps, user_id) VALUES ($1, $2, $3, $4, $5, $6);"
-
+  sql = "INSERT INTO logs (date, exercise, weight, sets, reps, notes, user_id) VALUES ($1, $2, $3, $4, $5, $6, $7);"
 
   run_sql(sql, [
-  params['date'],
-  params['exercise'],
-  params['weight'],
-  params['sets'],
-  params['reps'],
-  current_user()['id']
+    params['date'],
+    params['exercise'],
+    params['weight'],
+    params['sets'],
+    params['reps'],
+    params['notes'],
+    current_user()['id']
   ])
 
   redirect '/diary'
 end
-
-
 
 get '/pr' do
 

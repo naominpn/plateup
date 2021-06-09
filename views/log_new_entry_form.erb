@@ -1,11 +1,11 @@
 <p>Entry</p>
 <form action="/diary/new" method = "post">
     <label for="">Date</label>
-    <input type="date" name="date" id="date">
+    <input type="date" name="date" id="date" required>
 
     <label for="">Exercise</label>
-    <select name="exercise" id="exercise">
-        <option value="none">--</option>
+    <select name="exercise" id="exercise" required>
+        <option value="">Select Exercise</option>
         <option value="bench_press">Bench Press</option>
         <option value="squat">Squat</option>
         <option value="deadlift">Deadlift</option>
@@ -14,16 +14,16 @@
     </select>
 
     <label for="">Weight(kg)</label>
-    <input type="number" name="weight" id="weight">
+    <input type="number" name="weight" id="weight" value="0" required>
 
     <label for="">Number of Sets</label>
-    <input type="number" name="sets" id="sets">
+    <input type="number" name="sets" id="sets" value="0" required>
 
     <label for="">Number of Reps</label>
-    <input type="number" name="reps" id="reps">
+    <input type="number" name="reps" id="reps" value="0" required>
 
     <label for="">Notes (less than 150 chars)</label>
     <input type="text" name="notes" id="notes">
 
     <button>Log</button>
-</form>
+</form> 
