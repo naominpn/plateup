@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plate Up</title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <%if logged_in?%>
+      logged in as:
+      <%=current_user()['name']%>
+      
+      <form action="/session" method = "post">
+        <input type="hidden" name="_method" value="delete">
+        <button>logout</button>
+      </form>  
+    <%else%>
+      <a href="/login">log in</a> | <a href="/signup">sign up</a>
+    <%end%>
+  </header>
+  
+  <nav>
+    <ul>
+      <li> <a href="">Exercises</a> </li>
+      <li> <a href="/pr">My Personal Record</a> </li>
+      <li> <a href="/diary">History</a> </li>    
+    </ul>
+  </nav>
+  <%= yield %>
+
+</body>
+</html>
