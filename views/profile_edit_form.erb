@@ -1,5 +1,6 @@
 <h2>Edit Profile</h2>
-<form action="/profile/edit" method = "post">
+<form action="/profile" method = "post">
+    <input type="hidden" name="_method" value="put">
     <label for="">Name: </label>
     <input type="text" name="name" id="name" value="<%= current_user['name']%>">
 
@@ -7,13 +8,13 @@
     <input type="text" name="email" id="email" value="<%= current_user['email']%>">
 
     <label for="">Change Password:</label>
-    <input type="text" name="password" id="password">
+    <input type="password" name="password" id="password">
     
     <label for="">Current Bodyweight: </label>
-    <input type="number" step="0.1" name="email" id="email" value="<%= current_user['current_weight']%>">
+    <input type="number" step="0.1" name="current_weight" id="current_weight" value="<%= current_user['current_weight']%>">
 
     <label for="">Goal Bodyweight: </label>
-    <input type="number" step="0.1" name="email" id="email" value="<%= current_user['goal_weight']%>">
+    <input type="number" step="0.1" name="goal_weight" id="goal_weight" value="<%= current_user['goal_weight']%>">
 
     <button>Submit</button>
 </form>

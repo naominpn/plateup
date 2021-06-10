@@ -45,6 +45,31 @@ get '/profile/edit' do
   erb :profile_edit_form
 end
 
+put '/profile' do 
+
+  sql = "UPDATE users SET name = $1, email = $2, current_weight = $3, goal_weight = $4 WHERE id = $5;" 
+  
+  run_sql(sql, [
+  params['name'],
+  params['email'],
+  params['current_weight'],
+  params['goal_weight'],
+  session[:user_id]
+  ])
+
+  trimmed_password = params['password'].strip
+  if trimmed_password != "" 
+    password_digest = BCrypt::Password.create(params['password'])
+
+    sql = "UPDATE users SET password_digest = $1 WHERE id = $2;" 
+    
+    run_sql(sql, [
+    password_digest,
+    session[:user_id]
+    ])
+  end
+  redirect '/profile'
+end
 ############################
 
 get '/signup' do
@@ -68,10 +93,18 @@ post '/user' do
 end
 
 ############################
+get '/exercises' do
+  exercise_list = run_sql("SELECT * FROM exercises;")
+
+  erb :exercises, locals: {exercise_list: exercise_list}
+end
+
+############################
 get '/diary' do
   redirect '/login' unless logged_in?
   
   history = run_sql("SELECT * FROM logs WHERE user_id = #{session[:user_id]};")
+
   erb :diary, locals: {history: history}
 end
 

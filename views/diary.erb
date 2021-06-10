@@ -9,11 +9,11 @@
         <th>Notes</th>
     </tr>
 
-    <% history.each do |entry|%>
+    <% history.reverse_each do |entry|%>
     <tr>
         <td> <%= entry['date'] %>   </td>
         <td> <%= entry['exercise'] %> </td>
-        <td> <%= entry['weight'] %></td>
+        <td> <%= entry['weight'].to_f %></td>
         <td> <%= entry['sets']%> x <%= entry['reps'] %> </td>
         <td> <%= entry['notes'] %> </td>
         
