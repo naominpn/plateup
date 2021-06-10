@@ -10,7 +10,7 @@
   <header>
     <%if logged_in?%>
       logged in as:
-      <%=current_user()['name']%>
+      <a href="/profile"><%=current_user()['name']%></a>
       
       <form action="/session" method = "post">
         <input type="hidden" name="_method" value="delete">

@@ -1,0 +1,19 @@
+<h2>Edit Profile</h2>
+<form action="/profile/edit" method = "post">
+    <label for="">Name: </label>
+    <input type="text" name="name" id="name" value="<%= current_user['name']%>">
+
+    <label for="">Email: </label>
+    <input type="text" name="email" id="email" value="<%= current_user['email']%>">
+
+    <label for="">Change Password:</label>
+    <input type="text" name="password" id="password">
+    
+    <label for="">Current Bodyweight: </label>
+    <input type="number" step="0.1" name="email" id="email" value="<%= current_user['current_weight']%>">
+
+    <label for="">Goal Bodyweight: </label>
+    <input type="number" step="0.1" name="email" id="email" value="<%= current_user['goal_weight']%>">
+
+    <button>Submit</button>
+</form>

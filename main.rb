@@ -8,24 +8,6 @@ require_relative "helpers.rb"
 
 enable :sessions
 
-def current_user
-  if session[:user_id] == nil
-      return {}
-  end
-  
-  user = run_sql("SELECT * FROM users WHERE id = #{session[:user_id]};")[0]
-  return user
-end
-
-def logged_in?
-  if session[:user_id] == nil
-      return false
-  else 
-      return true
-  end
-end
-
-
 get '/' do
   erb :index
 end
@@ -53,6 +35,14 @@ end
 delete '/session' do
   session[:user_id] = nil
   redirect '/login'
+end
+
+get '/profile' do
+  erb :profile_view
+end
+
+get '/profile/edit' do
+  erb :profile_edit_form
 end
 
 ############################
@@ -89,7 +79,7 @@ get '/diary/new' do
   erb :log_new_entry_form
 end
 
-post '/diary/new' do
+post '/diary' do
   redirect '/login' unless logged_in?
 
   sql = "INSERT INTO logs (date, exercise, weight, sets, reps, notes, user_id) VALUES ($1, $2, $3, $4, $5, $6, $7);"
@@ -117,7 +107,7 @@ delete '/diary/:id' do
   redirect '/diary'
 end
 
-
+##########################
 
 get '/pr' do
   redirect '/login' unless logged_in?

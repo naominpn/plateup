@@ -1,0 +1,7 @@
+<h2>Profile</h2>
+Name: <%= current_user()['name'] %> 
+Email: <%= current_user['email'] %>
+Current Bodyweight: <%= current_user['current_weight'] %> kg
+Goal Bodyweight: <%= current_user['goal_weight']%> kg 
+
+<a href="/profile/edit">edit</a>
