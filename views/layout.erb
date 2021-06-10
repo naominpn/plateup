@@ -9,6 +9,7 @@
 </head>
 <body>
   <header>
+  <img class="logo-image" src="https://i.imgur.com/8v8wdhQ.png" alt="">
     <%if logged_in?%>
       logged in as:
       <a href="/profile"><%=current_user()['name']%></a>
@@ -18,7 +19,9 @@
         <button>logout</button>
       </form>  
     <%else%>
+      <div>
       <a href="/login">log in</a> | <a href="/signup">sign up</a>
+      </div>
     <%end%>
   </header>
   
