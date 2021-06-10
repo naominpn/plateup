@@ -5,17 +5,17 @@ CREATE TABLE users(
     email TEXT,
     password_digest TEXT,
     name TEXT,
-    current_weight INTEGER,
-    goal_weight INTEGER
+    current_weight REAL,
+    goal_weight REAL
 );
 
 CREATE TABLE logs(
     id SERIAL PRIMARY KEY,
     date DATE,
     exercise TEXT,
-    weight INT,
+    weight REAL,
     sets INT,
     reps INT,
-    notes TEXT,
+    notes VARCHAR(255),
     user_id INT
 );

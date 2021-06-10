@@ -14,7 +14,7 @@
     </select>
 
     <label for="">Weight(kg)</label>
-    <input type="number" name="weight" id="weight" value="0" required>
+    <input type="number" step="0.1" name="weight" id="weight" value="0" required>
 
     <label for="">Number of Sets</label>
     <input type="number" name="sets" id="sets" value="0" required>
@@ -22,8 +22,8 @@
     <label for="">Number of Reps</label>
     <input type="number" name="reps" id="reps" value="0" required>
 
-    <label for="">Notes (less than 150 chars)</label>
-    <input type="text" name="notes" id="notes">
+    <label for="">Notes (less than 250 chars)</label>
+    <input type="text" name="notes" id="notes" maxlength="250">
 
     <button>Log</button>
 </form> 

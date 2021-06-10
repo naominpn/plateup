@@ -1,15 +1,19 @@
 <table>
     <tr>
+        <th>Date</th>
         <th>Exercise</th>
         <th>Weight</th>
         <th>Reps in one set</th>
     </tr>
 
+    <% personal_records.each do |item| %>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td> <%= item[:date] %> </td>
+        <td> <%= item[:exercise_name] %> </td>
+        <td> <%= item[:weight_record] %> </td>
+        <td> <%= item[:reps] %> </td>
     </tr>
+    <% end %>
 
 
 

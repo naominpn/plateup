@@ -14,8 +14,15 @@
         <td> <%= entry['date'] %>   </td>
         <td> <%= entry['exercise'] %> </td>
         <td> <%= entry['weight'] %></td>
-        <td> <%= entry['sets']%> X <%= entry['reps'] %> </td>
+        <td> <%= entry['sets']%> x <%= entry['reps'] %> </td>
         <td> <%= entry['notes'] %> </td>
+        
+        <form action="/diary/<%= entry['id']%>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <td><button>Delete</button></td>
+        </form>
+        
     </tr>
+    
     <% end %>
 </table>

@@ -62,7 +62,7 @@ get '/signup' do
 end
 #sign up form
 
-post '/user/create' do
+post '/user' do
   password_digest = BCrypt::Password.create(params["password"])
 
   sql = "INSERT INTO users (email, password_digest, name, current_weight, goal_weight) VALUES ($1, $2, $3, $4, $5);"
@@ -107,7 +107,53 @@ post '/diary/new' do
   redirect '/diary'
 end
 
-get '/pr' do
+delete '/diary/:id' do
+  sql = "DELETE FROM logs WHERE id = $1;"
 
-  erb :pr
+  run_sql(sql, [
+    params['id']
+  ])
+
+  redirect '/diary'
+end
+
+
+
+get '/pr' do
+  redirect '/login' unless logged_in?
+  history = run_sql("SELECT * FROM logs WHERE user_id = #{session[:user_id]};")
+
+  all_exercises = []
+  history.each do |item|
+    exercise = item['exercise']
+    all_exercises.push(exercise)
+  end 
+  all_exercises = all_exercises.uniq.sort
+
+  personal_records = []
+  all_exercises.each do |exercise| 
+    weight_record = 0
+    exercise_date = ""
+    reps = 0
+
+    history.each do |item|
+      if (item['exercise'] == exercise) 
+        if(item['weight'].to_f > weight_record)
+          weight_record = item['weight'].to_f
+          exercise_date = item['date']
+          reps = item['reps'].to_i
+        end
+      end
+    end
+
+    hash = {
+      exercise_name: exercise,
+      weight_record: weight_record,
+      date: exercise_date,
+      reps: reps
+    }
+
+    personal_records.push(hash)
+  end
+  erb :pr, locals: {personal_records: personal_records}
 end
