@@ -2,15 +2,20 @@
 
 <table>
     <tr>
+        <th>Date</th>
         <th>Exercise</th>
         <th>Weight</th>
-        <th>Reps in one set</th>
+        <th>Sets x Reps</th>
+        <th>Notes</th>
     </tr>
 
-    
+    <% history.each do |entry|%>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td> <%= entry['date'] %>   </td>
+        <td> <%= entry['exercise'] %> </td>
+        <td> <%= entry['weight'] %></td>
+        <td> <%= entry['sets']%> X <%= entry['reps'] %> </td>
+        <td> <%= entry['notes'] %> </td>
     </tr>
+    <% end %>
 </table>

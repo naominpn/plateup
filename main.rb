@@ -79,7 +79,10 @@ end
 
 ############################
 get '/diary' do
-  erb :diary
+  redirect '/login' unless logged_in?
+  
+  history = run_sql("SELECT * FROM logs WHERE user_id = #{session[:user_id]};")
+  erb :diary, locals: {history: history}
 end
 
 get '/diary/new' do
