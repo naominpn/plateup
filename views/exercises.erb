@@ -1,4 +1,10 @@
-<% exercise_list.each do |item| %>
-    <h5><%= item["exercise_name"]%></h5>
-    <img src="<%= item["exercise_image"] %>" alt="">
-<%end %>
+<section class="middle">
+<div class="all-exercises">
+    <% exercise_list.each do |item| %>
+        <div>
+            <h5><%= item["exercise_name"]%></h5>
+            <img src="<%= item["exercise_image"] %>" alt="">
+        </div>
+    <%end %>
+</div>
+</section>

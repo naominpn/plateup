@@ -1,28 +1,33 @@
-<a href="/diary/new">Add a new entry</a>
-
-<table>
-    <tr>
-        <th>Date</th>
-        <th>Exercise</th>
-        <th>Weight</th>
-        <th>Sets x Reps</th>
-        <th>Notes</th>
-    </tr>
-
-    <% history.reverse_each do |entry|%>
-    <tr>
-        <td> <%= entry['date'] %>   </td>
-        <td> <%= entry['exercise'] %> </td>
-        <td> <%= entry['weight'].to_f %></td>
-        <td> <%= entry['sets']%> x <%= entry['reps'] %> </td>
-        <td> <%= entry['notes'] %> </td>
-        
-        <form action="/diary/<%= entry['id']%>" method="post">
-            <input type="hidden" name="_method" value="delete">
-            <td><button>Delete</button></td>
-        </form>
-        
-    </tr>
+<section class="middle">
+    <div class="new-log">
+        <a  href="/diary/new">Add a new entry</a>
+    </div>
     
-    <% end %>
-</table>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Exercise</th>
+            <th>Weight(kg)</th>
+            <th>Sets x Reps</th>
+            <th>Notes</th>
+        </tr>
+
+        <% history.reverse_each do |entry|%>
+        <tr>
+            <td> <%= entry['date'] %>   </td>
+            <td> <%= entry['exercise'] %> </td>
+            <td> <%= entry['weight'].to_f %></td>
+            <td> <%= entry['sets']%> x <%= entry['reps'] %> </td>
+            <td> <%= entry['notes'] %> </td>
+            
+            <form action="/diary/<%= entry['id']%>" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <td><button>Delete</button></td>
+            </form>
+            
+        </tr>
+        
+        <% end %>
+    </table>
+</section>

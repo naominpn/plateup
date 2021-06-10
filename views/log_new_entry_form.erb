@@ -1,29 +1,37 @@
-<p>Entry</p>
-<form action="/diary" method = "post">
-    <label for="">Date</label>
-    <input type="date" name="date" id="date" required>
+<section class="middle">
+    <h4>Entry</h4>
 
-    <label for="">Exercise</label>
-    <select name="exercise" id="exercise" required>
-        <option value="">Select Exercise</option>
-        <option value="Bench Press">Bench Press</option>
-        <option value="Squat">Squat</option>
-        <option value="Deadlift">Deadlift</option>
-        <option value="Rows">Rows</option>
-        <option value="Bicep Curls">Bicep Curls</option>
-    </select>
+    <div class="border-form">
+    <form action="/diary" method = "post">
+        <label for="">Date</label>
+        <input type="date" name="date" id="date" required>
 
-    <label for="">Weight(kg)</label>
-    <input type="number" step="0.1" name="weight" id="weight" value="0" required>
+        <label for="">Exercise</label>
+        <select name="exercise" id="exercise" required>
+            <option value="">Select Exercise</option>
+            <option value="Bench Press">Bench Press</option>
+            <option value="Squat">Squat</option>
+            <option value="Deadlift">Deadlift</option>
+            <option value="Rows">Rows</option>
+            <option value="Bicep Curls">Bicep Curls</option>
+        </select>
 
-    <label for="">Number of Sets</label>
-    <input type="number" name="sets" id="sets" value="0" required>
+        <label for="">Weight(kg)</label>
+        <input type="number" step="0.1" name="weight" id="weight" value="0" required>
 
-    <label for="">Number of Reps</label>
-    <input type="number" name="reps" id="reps" value="0" required>
+        <label for="">Number of Sets</label>
+        <input type="number" name="sets" id="sets" value="0" required>
 
-    <label for="">Notes (less than 250 chars)</label>
-    <input type="text" name="notes" id="notes" maxlength="250">
+        <label for="">Number of Reps</label>
+        <input type="number" name="reps" id="reps" value="0" required>
 
-    <button>Log</button>
-</form> 
+        <label for="">Notes (less than 250 chars)</label>
+        <br>
+        <textarea type="text" name="notes" id="notes" maxlength="250" rows="4" cols="50"></textarea>
+    
+    </div>
+        <div class="button-div">
+            <button>Log</button>
+        </div>
+    </form>
+</section>

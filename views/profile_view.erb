@@ -1,7 +1,13 @@
-<h2>Profile</h2>
-Name: <%= current_user()['name'] %> 
-Email: <%= current_user['email'] %>
-Current Bodyweight: <%= current_user['current_weight'] %> kg
-Goal Bodyweight: <%= current_user['goal_weight']%> kg 
+<section class="middle">
+    <h4>Profile</h4>
+    <div class="border-form">
+        <p>Name: <%= current_user()['name'] %> </p> 
+        <p>Email: <%= current_user['email'] %></p> 
+        <p>Current Bodyweight: <%= current_user['current_weight'] %> kg</p> 
+        <p>Goal Bodyweight: <%= current_user['goal_weight']%> kg </p> 
+    </div>
 
-<a href="/profile/edit">edit</a>
+    <div class="button-div">
+        <a href="/profile/edit">Edit</a>
+    </div>
+</section>

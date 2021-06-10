@@ -1,19 +1,35 @@
-<form action="/user" method = "post">
-    <p>Sign Up</p>
-    <label for="email">Enter Email Address:</label>
-    <input type="text" name="email" id="email" placeholder="Email Address">
+<section class="middle">
+    <section class="sub-section">
+    <h4>Sign Up</h4>
+    <div class="border-form">
+        <form action="/user" method = "post">
+            <label for="email">Enter Email Address:</label>
+            <input type="text" name="email" id="email" placeholder="Email Address">
 
-    <label for="password">Create Password:</label>
-    <input type="password" name="password" id="password" placeholder="Password">
+            <label for="password">Create Password:</label>
+            <input type="password" name="password" id="password" placeholder="Password">
+    </div>
+    </section>
 
-    <p>Tell us about yourself</p>
-    <label for="">Name: </label>
-    <input type="text" name="name" id="name" placeholder="Name">
+    <section class="sub-section">
+    <h4>Tell us about yourself</h4>
+        <div class="border-form">       
+            <label for="">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Name">
 
-    <label for="">Current Bodyweight:</label>
-    <input type="number" step="0.1" name="current_weight" id="current_weight" placeholder="Current Bodyweight"><span> kg</span>
+            <label for="">Current Bodyweight:</label>
+            <br>
+            <input class="with-label" type="number" step="0.1" name="current_weight" id="current_weight" placeholder="Current Bodyweight"><span> kg</span>
+            <br>
+            <label for="">Goal Bodyweight:</label>
+            <br>
+            <input class="with-label" type="number" step="0.1" name="goal_weight" id="goal_weight" placeholder="Goal Bodyweight"><span>kg</span>
+            <br>
+            </div>
+        <div class="button-div">    
+            <button>Sign Up</button>
+        </div>
+        </form>
+    </section>
 
-    <label for="">Goal Bodyweight:</label>
-    <input type="number" step="0.1" name="goal_weight" id="goal_weight" placeholder="Goal Bodyweight"><span> kg</span> 
-    <button>Sign Up</button>
-</form>
+</section>
