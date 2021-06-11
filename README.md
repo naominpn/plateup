@@ -18,13 +18,19 @@ Installation Link: https://safe-fortress-70348.herokuapp.com/
 <p>Instead of 3 tables having relations to each other. I've decided to just use 2 tables that are connected(Users and their logs) and one seperate table (List of Exercises with a url image)</p>
 <br>
 <p>Once I have figured tables I was going to make, i drew up a very rough wireframe of how I wanted my website; more particularly how I wanted to present all my information. I got some inspiration from MyFitnessPal to help me lay out the sign in and sign up.</p>
-<p>Links: </p>
+<p>Links:</p>
+<ul> 
+  <li>https://i.imgur.com/MLTmedc.jpg</li>
+  <li>https://i.imgur.com/x9KCcSF.jpg </li>
+ </ul>
+
 <br>
 <p>Once that was done, I started to build my with setting up log in and sign up, then navigation bar and then slowly branched out to pages that the nav links sent me to step by step.</p>
 <p>I have used RESTful routes as appropriately as possible. My app includes read, create, update and delete routes</p>
 <br>
 <br>
 <p>After all my server side code was written and tested multiple times, I worked on the styling and came up with a LOGO for my website.</p>
+<p>Logo: https://i.imgur.com/8v8wdhQ.png </p>
 
 <h2>Future Developments</h2>
 <p> At the moment, I only have 5 exercises that can be selected. I would like to explain this and allow users to personalise and add their own exercises.</p> 
