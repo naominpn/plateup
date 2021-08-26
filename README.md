@@ -6,7 +6,7 @@ View demo here: https://safe-fortress-70348.herokuapp.com/
 <h2>Preview</h2>
 <img width="500" alt="plate-up-preview-1" src="https://user-images.githubusercontent.com/83072963/130998370-5484e309-42ad-4714-9111-51e19705fbfa.png">
 <img width="500" alt="plate-up-preview-2" src="https://user-images.githubusercontent.com/83072963/130998455-f99243e2-1377-4648-95a2-9d4f615a2b5d.png">
-<img width="1420" alt="plate-up-preview-3" src="https://user-images.githubusercontent.com/83072963/130998604-c5d923aa-9b2b-4976-b7f5-05a5bb7c2b71.png">
+<img width="500" alt="plate-up-preview-3" src="https://user-images.githubusercontent.com/83072963/130998604-c5d923aa-9b2b-4976-b7f5-05a5bb7c2b71.png">
 
 <h2>About </h2>
 <p>"Plate Up" is my first database backed web application. I made this for intents and purposes of personal use to keep track of my progress at the gym. Most of the time I have trouble remembering what certain exercises look like and what weight I used. I go to two different gyms, one with a personal trainer I've been with for almost 4 years and another gym where I take classes I enjoy. My goal to do exercise weight-based training at both gyms. </p>
