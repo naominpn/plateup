@@ -1,7 +1,10 @@
 <h1>Plate Up Web App</h1>
-View demo here: https://safe-fortress-70348.herokuapp.com/
-<p>Use email address: test@test.test</p>
-<p>password: test</p>
+<p>View demo here: https://safe-fortress-70348.herokuapp.com/</p>
+<br>
+<p>Use email address: test@test.test
+ <br>
+password: test
+<p>
  
 <h2>Preview</h2>
 <img width="500" alt="plate-up-preview-1" src="https://user-images.githubusercontent.com/83072963/130998370-5484e309-42ad-4714-9111-51e19705fbfa.png">
