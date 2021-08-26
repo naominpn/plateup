@@ -19,6 +19,9 @@ View demo here: https://safe-fortress-70348.herokuapp.com/
   <li>Pry</li>
   <li>PSQL/PG; as my database</li>
   <li>Heroku; used to deploy and allow others to access</li>
+  <li>CSS</li>
+ <li>HTML</li>
+ <li>Ruby</li>
 </ul>
 
 <h2>Approach Taken</h2>
