@@ -1,6 +1,6 @@
 <h1>Plate Up Web App</h1>
-Installation Link: https://safe-fortress-70348.herokuapp.com/
-<p>Plate Up is my first database backed web application. I made this for intents and purposes of personal use to keep track of my progress at the gym. Most of the time I have trouble remembering what certain exercises look like and what weight I used. I go to two different gyms, one with a personal trainer I've been with for almost 4 years and another gym where I take classes I enjoy. My goal to do exercise weight-based training at both gyms. </p>
+View demo here: https://safe-fortress-70348.herokuapp.com/
+<p>"Plate Up" is my first database backed web application. I made this for intents and purposes of personal use to keep track of my progress at the gym. Most of the time I have trouble remembering what certain exercises look like and what weight I used. I go to two different gyms, one with a personal trainer I've been with for almost 4 years and another gym where I take classes I enjoy. My goal to do exercise weight-based training at both gyms. </p>
 <p> This app is to help me and others keep track of their exercises everytime they go to the gym and to also present information when they do hit their all-time high. </p>
 
 <h2>Technologies Used</h2>
